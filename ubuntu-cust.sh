@@ -1,5 +1,7 @@
 #/bin/bash
+echo "Upgrading packages"
 apt update -y && apt-upgrade -y
+echo "Adding tools"
 apt install open-vm-tools net-tools perl -y
 /etc/init.d/rsyslog stop
 /etc/init.d/atd stop
@@ -31,7 +33,7 @@ rm -rf ~root/.ssh/
 cd ~root
 rm -fr .viminfo install.log.syslog install.log .ssh
 cd /home
-rm -f */{.bash_history}
+rm -f */.bash_history
 rm -f */*.sh
 rm -f ~root/.bash_history
 unset HISTFILE
