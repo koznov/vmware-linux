@@ -28,7 +28,7 @@ rm -f lynis*
 rm -f vmware-tools-upgrader.log vmware-imc/toolsDeployPkg.log
 find . -type f  | while read f; do > $f; done
 find . -type f -ls
-rm –f /var/log/*-???????? /var/log/*.gz
+rm -f /var/log/*-???????? /var/log/*.gz
 rm -f /var/log/dmesg.old
 rm -rf /var/log/anaconda
 cat /dev/null > /var/log/audit/audit.log
@@ -39,10 +39,10 @@ rm -f /var/log/*-* /var/log/*.gz 2>/dev/null
 rm -f /etc/sysconfig/network-scripts/ifcfg-*en*
 rm -f /etc/udev/rules.d/70*
 rm -f /var/lib/dhclient/*
-sed -i ‘/^(HWADDR|UUID)=/d’ /etc/sysconfig/network-scripts/ifcfg-eth0
-rm –rf /tmp/*
-rm –rf /var/tmp/*
-rm –f /etc/ssh/*key*
+sed -i ‘/^(HWADDR|UUID)=/d’ /etc/sysconfig/network-scripts/ifcfg-ens192
+rm -rf /tmp/*
+rm -rf /var/tmp/*
+rm -f /etc/ssh/*key*
 echo "Changing hostname to localhost"
 hostname localhost
 echo "localhost" > /etc/hostname
