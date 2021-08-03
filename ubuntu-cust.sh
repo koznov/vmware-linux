@@ -1,6 +1,6 @@
 #/bin/bash
 echo "Upgrading packages"
-apt update -y && apt-upgrade -y
+apt update -y && apt upgrade -y
 echo "Adding tools"
 apt install open-vm-tools net-tools perl -y
 echo "Stopping logging"
@@ -42,6 +42,7 @@ echo "Removing bash history"
 rm -f */.bash_history
 rm -f */*.sh
 rm -f ~root/.bash_history
+> $HISTFILE
 unset HISTFILE
 echo "Powering off! Bye-bye!"
-cat /dev/null > ~/.bash_history && history -c && exit && halt -p
+history -c && exit && halt -p
