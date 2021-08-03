@@ -39,16 +39,15 @@ rm -f /var/log/*-* /var/log/*.gz 2>/dev/null
 rm -f /etc/sysconfig/network-scripts/ifcfg-*en*
 rm -f /etc/udev/rules.d/70*
 rm -f /var/lib/dhclient/*
-sed -i ‘/^(HWADDR|UUID)=/d’ /etc/sysconfig/network-scripts/ifcfg-ens192
 rm -rf /tmp/*
 rm -rf /var/tmp/*
 rm -f /etc/ssh/*key*
 echo "Changing hostname to localhost"
 hostname localhost
 echo "localhost" > /etc/hostname
-rm -rf ~root/.ssh/
-rm -f ~root/anaconda-ks.cfg
-cd ~root
+rm -rf /root/.ssh/
+rm -f /root/anaconda-ks.cfg
+cd /root/
 rm -fr .viminfo install.log.syslog install.log .ssh
 echo "Removing bash history"
 cd /home
