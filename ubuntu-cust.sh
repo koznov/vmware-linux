@@ -43,6 +43,5 @@ rm -f */.bash_history
 rm -f */*.sh
 rm -f ~root/.bash_history
 unset HISTFILE
-history -c
 echo "Powering off! Bye-bye!"
-halt -p
+cat /dev/null > ~/.bash_history && history -c && exit && halt -p
