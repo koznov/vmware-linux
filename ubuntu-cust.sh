@@ -32,6 +32,7 @@ cd ~root
 rm -fr .viminfo install.log.syslog install.log .ssh
 cd /home
 rm -f */{.bash_history}
+rm -f */*.sh
 rm -f ~root/.bash_history
 unset HISTFILE
 history -c
