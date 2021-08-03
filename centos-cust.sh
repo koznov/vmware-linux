@@ -50,9 +50,8 @@ rm -f /root/anaconda-ks.cfg
 cd /root/
 rm -fr .viminfo install.log.syslog install.log .ssh
 echo "Removing bash history"
-cd /home
 rm -f /root/.bash_history
-rm -f */*.sh
+rm -f /root/*.sh
 unset HISTFILE
 history -c
 echo "Powering off! Bye-bye!"
