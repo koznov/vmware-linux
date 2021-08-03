@@ -1,7 +1,7 @@
 #/bin/sh
 echo "Upgrading packages"
 yum update -y
-yum install perl open-vm-tools net-tools yum-utils
+yum install perl open-vm-tools net-tools yum-utils wget nano
 echo "Stopping logging"
 /bin/systemctl stop rsyslog.service
 /sbin/service auditd stop
