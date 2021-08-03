@@ -56,4 +56,6 @@ rm -f */*.sh
 unset HISTFILE
 history -c
 echo "Powering off! Bye-bye!"
-history -c && exit && halt -p
+history -c
+exit
+halt -p
