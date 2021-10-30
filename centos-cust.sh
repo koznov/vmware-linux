@@ -11,7 +11,7 @@ package-cleanup --oldkernels --count=1
 package-cleanup --orphans
 package-cleanup --problems
 package-cleanup --leaves
-yum clean all
+yum clean all -y
 echo "Removing logs"
 cd /var/log/
 rm -f *-2* *gz *old
