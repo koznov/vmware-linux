@@ -7,9 +7,9 @@ echo "Stopping logging"
 /etc/init.d/rsyslog stop
 /etc/init.d/atd stop
 echo "Cleaning packages"
-apt-get autoclean
-apt-get clean
-apt-get autoremove
+apt-get autoclean -y 
+apt-get clean -y
+apt-get autoremove -y
 echo "Removing logs"
 logrotate -f /etc/logrotate.conf
 cd /var/log/
